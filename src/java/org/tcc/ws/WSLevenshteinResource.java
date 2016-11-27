@@ -45,7 +45,8 @@ public class WSLevenshteinResource {
             } else {
                 cmpLev = ob.get("TIPL_DESCRICAO").toString();
             }
-
+              if(pesquisa==null)
+                  pesquisa=" ";
             int txLev = StringUtils.getLevenshteinDistance(pesquisa, cmpLev);
 
             if (txLev < 20) {
